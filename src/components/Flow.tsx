@@ -43,14 +43,20 @@ export default function App({
     [setEdges]
   );
 
+  const proOptions = {
+    hideAttribution : true,
+  }
+
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
+        proOptions={proOptions}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        // fitView={true}
       />
     </div>
   );
