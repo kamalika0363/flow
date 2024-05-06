@@ -16,65 +16,16 @@ const initialNodes: Node[] = [
     type: 'input',
     data: { label: 'Param 1' },
     position: { x: 250, y: 5 },
-    size: nodeSize,
-    handles: [
-      {
-        type: 'source',
-        position: 'bottom' as Position,
-        x: nodeSize.width * 0.5,
-        y: nodeSize.height,
-        width: 1,
-        height: 1,
-      },
-    ],
   },
   {
     id: '2',
     data: { label: 'Param 2' },
     position: { x: 100, y: 100 },
-    size: nodeSize,
-    handles: [
-      {
-        type: 'source',
-        position: 'bottom' as Position,
-        x: nodeSize.width * 0.5,
-        y: nodeSize.height,
-        width: 1,
-        height: 1,
-      },
-      {
-        type: 'target',
-        position: 'top' as Position,
-        x: nodeSize.width * 0.5,
-        y: 0,
-        width: 1,
-        height: 1,
-      },
-    ],
   },
   {
     id: '3',
     data: { label: 'Param 3' },
     position: { x: 400, y: 100 },
-    size: nodeSize,
-    handles: [
-      {
-        type: 'source',
-        position: 'bottom' as Position,
-        x: nodeSize.width * 0.5,
-        y: nodeSize.height,
-        width: 1,
-        height: 1,
-      },
-      {
-        type: 'target',
-        position: 'top' as Position,
-        x: nodeSize.width * 0.5,
-        y: 0,
-        width: 1,
-        height: 1,
-      },
-    ],
   },
 ];
 
@@ -95,9 +46,7 @@ export default async function FlowComponent() {
   const { nodes, edges } = await fetchData();
   return (
     <main className={styles.main}>
-      <ReactFlowProvider initialNodes={nodes} initialEdges={edges}>
         <Flow nodes={nodes} edges={edges} />
-      </ReactFlowProvider>
     </main>
   );
 }
