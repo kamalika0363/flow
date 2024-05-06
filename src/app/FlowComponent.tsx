@@ -7,7 +7,7 @@ import Flow from '@/components/Flow';
 
 const nodeSize = {
   width: 100,
-  height: 200,
+  height: 100,
 };
 
 const initialNodes: Node[] = [
