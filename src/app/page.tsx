@@ -1,6 +1,6 @@
 import FlowComponent from "@/app/FlowComponent"
 import Navbar from "@/components/Navbar";
-import About_Flow from "@/components/About/page";
+// import About from "@/components/About/page";
 import React from "react";
 export default function HomePage(){
   return(
@@ -21,9 +21,9 @@ export default function HomePage(){
         <div className="flex items-center justify-center">
             <FlowComponent />
         </div>
-        <div>
-            <About_Flow />
-        </div>
+        {/*<div>*/}
+        {/*    <About />*/}
+        {/*</div>*/}
     </div>
   )
 }
