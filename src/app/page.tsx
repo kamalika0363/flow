@@ -1,5 +1,6 @@
 import FlowComponent from "@/app/FlowComponent"
 import Navbar from "@/components/Navbar";
+import About from "@/components/About/About";
 
 export default function HomePage(){
   return(

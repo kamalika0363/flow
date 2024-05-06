@@ -9,7 +9,7 @@ import ReactFlow, {
   applyEdgeChanges,
   OnNodesChange,
   OnEdgesChange,
-  OnConnect,
+  OnConnect, BackgroundVariant, Background,
 } from 'reactflow';
 
 import 'reactflow/dist/style.css';
@@ -48,7 +48,7 @@ export default function App({
   }
 
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
+    <div className="w-[100vw] lg:w-[60vw] h-[40vh] flex items-center justify-center my-12">
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -57,7 +57,9 @@ export default function App({
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         // fitView={true}
-      />
+      >
+        <Background color="#aaa" variant={BackgroundVariant.Cross} gap={16} size={1} />
+      </ReactFlow>
     </div>
   );
 }
